@@ -32,13 +32,13 @@
             @endif
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <form action="{{ route('manager.news.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('manager.news.store') }}" method="post" enctype="multipart/form-data" style="width: 50%;">
                     @csrf
                     <div class="form-group">
                         <input type="text" name="title" class="form-control" placeholder="Заголовок">
                     </div>
                     <div class="form-group">
-                        <textarea name="text" class="form-control" placeholder="Текст"></textarea>
+                        <textarea name="text" rows="20" class="form-control" placeholder="Текст"></textarea>
                     </div>
                     <div class="form-group">
                         <select name="category_id" class="form-control select2" style="width: 100%;">

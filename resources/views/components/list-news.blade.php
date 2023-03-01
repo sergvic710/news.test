@@ -1,7 +1,7 @@
 @foreach($news as $item)
     <div class="card mt-2">
         <div class="card-body">
-            <h5 class="card-title">{{ $item->title }}</h5>
+            <a href="{{ route('site.news.show',$item->id) }}" ><h5 class="card-title">{{ $item->title }}</h5></a>
             <div class="card-text">
                 {{ $item->text }}
             </div>

@@ -1,0 +1,10 @@
+artisan make:model Category -m (вместе с миграцией)
+
+migrate
+
+make:controller Category/IndexControler
+..... и прочие
+
+make:request Category/StoreRequest
+
+php artisan make:migration add_surname_patronimic_age_gender_address_to_users

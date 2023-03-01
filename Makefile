@@ -12,4 +12,5 @@ docker-down:
 docker-down-clear:
 	docker-compose down -v --remove-orphans
 docker-build:
+	mkdir __docker/mysql
 	docker-compose build

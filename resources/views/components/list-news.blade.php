@@ -9,5 +9,4 @@
         </div>
     </div>
 @endforeach
-11
-{{ $news->links() }}
+{{ $news->links('pagination::bootstrap-5') }}

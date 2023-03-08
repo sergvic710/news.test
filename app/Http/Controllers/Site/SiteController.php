@@ -15,9 +15,8 @@ class SiteController extends Controller
     public function index()
     {
         //
-        $news = News::orderBy('updated_at','desc')->get();
+        $news = News::orderBy('updated_at', 'desc')->paginate(1);
         return view('site.index', compact('news'));
-
     }
 
     /**
@@ -26,15 +25,14 @@ class SiteController extends Controller
      */
     public function category(Category $category)
     {
-        //
-//        dd($category);
-        $news = News::where('category_id', $category->id)->get();
-        return view('site.category', compact('news'));
-
+        return view('site.category', [
+                'news' => $category->news()->paginate(5)
+            ]
+        );
     }
+
     public function show(News $news)
     {
         return view('site.news', compact('news'));
-
     }
 }

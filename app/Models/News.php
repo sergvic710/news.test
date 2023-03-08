@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
 {
-
     protected $table = 'news';
-    protected $guarded = false;
     protected $primaryKey = 'id';
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function category() : HasMany
+    {
+        return $this->hasMany(News::class);
+    }
 }

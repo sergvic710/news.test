@@ -9,3 +9,5 @@
         </div>
     </div>
 @endforeach
+11
+{{ $news->links() }}

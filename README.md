@@ -16,3 +16,5 @@ localhost:8000
 Управление новостями
 
 localhost:8000/manager
+
+
